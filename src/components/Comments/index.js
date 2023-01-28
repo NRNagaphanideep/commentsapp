@@ -44,7 +44,7 @@ class Comments extends Component {
       id: uuidv4,
       userName,
       comment,
-      isLiked: false,
+      isLike: false,
     }
     this.setState(prevState => ({
       commentsList: [...prevState.commentsList, newComment],
@@ -60,7 +60,7 @@ class Comments extends Component {
     this.setState(prevState => ({
       commentsList: prevState.commentsList.map(eachItem => {
         if (id === eachItem.id) {
-          return {...eachItem, isLiked: !eachItem.isLiked}
+          return {...eachItem, isLike: !eachItem.isLike}
         }
         return eachItem
       }),
