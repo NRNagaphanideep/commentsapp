@@ -14,7 +14,7 @@ const CommentItem = props => {
     onDeleteComment,
     onChangeIsLike,
   } = props
-  const {id, userName, comment, isLiked} = commentDetails
+  const {id, userName, comment, isLike} = commentDetails
 
   const firstLetter = userName.slice(0, 1)
 
@@ -29,10 +29,10 @@ const CommentItem = props => {
   const onClickDelete = () => {
     onDeleteComment(id)
   }
-  const likeImgUrl = isLiked
+  const likeImgUrl = isLike
     ? 'https://assets.ccbp.in/frontend/react-js/comments-app/like-img.png'
     : 'https://assets.ccbp.in/frontend/react-js/comments-app/liked-img.png'
-  const isLikeImgUrl = isLiked ? 'liked' : 'notLiked'
+  const isLikeImgUrl = isLike ? 'liked' : 'notLiked'
 
   return (
     <li className="list-container">
